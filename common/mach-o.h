@@ -487,7 +487,7 @@ enum {
 	CS_CDHASH_LEN = 20,						/* always - larger hashes are truncated */
 	CS_HASH_MAX_SIZE = 48, /* max size of the hash we'll support */
 	CS_EXECSEG_MAIN_BINARY = 0x1,
-	CS_EXECSEG_ALLOW_UNSIGNED = 0x10,
+	CS_EXECSEG_ALLOW_UNSIGNED = 0x27,
 
 /*
  * Currently only to support Legacy VPN plugins,

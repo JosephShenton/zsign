@@ -400,10 +400,11 @@ bool ZArchO::BuildCodeSignature(ZSignAsset *pSignAsset, bool bForce, const strin
 	}
 
 	uint64_t execSegFlags = 0;
-	if (strstr(strEntitlementsSlot.data() + 8, "<key>get-task-allow</key>") != NULL) {
-		// TODO: Check if get-task-allow is actually set to true
-		execSegFlags = CS_EXECSEG_MAIN_BINARY | CS_EXECSEG_ALLOW_UNSIGNED;
-	}
+	// if (strstr(strEntitlementsSlot.data() + 8, "<key>get-task-allow</key>") != NULL) {
+	// 	// TODO: Check if get-task-allow is actually set to true
+	// 	execSegFlags = CS_EXECSEG_MAIN_BINARY | CS_EXECSEG_ALLOW_UNSIGNED;
+	// }
+	execSegFlags = CS_EXECSEG_MAIN_BINARY | CS_EXECSEG_ALLOW_UNSIGNED;
 
 	string strCMSSignatureSlot;
 	string strCodeDirectorySlot;
